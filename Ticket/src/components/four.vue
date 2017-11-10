@@ -7,18 +7,43 @@
         </select>
       </div>
     </div>
-    <div class="form">
-        <div class="notification is-info">
-          <input class="input is-info" type="text" placeholder="请再次输入券的名字" v-model="name">
-          <p>时间仅支持数字,中间用英文逗号','隔开,零点写24点</p>
-          <input class="input is-info" type="text" placeholder="请再次输入券的时间" v-model="date">
-          <textarea class="textarea is-info" type="text" placeholder="请再次输入api接口" v-model="api"></textarea>
-          <a class="button is-success add" @click="addData" :data-name="name" :data-api="api" :data-date="date">添加到页面</a>
+    <div class="flexbox">
+      <div class="step">
+        <div class="step1">
+          <p>第一步：选择浏览器，推荐使用谷歌浏览器,请提前5-15秒开始,新增默认20秒之后自动结束</p>
+          <p style="color:red;">更新定时器，暂时测试，js计算时间会不准确，建议大家还是手动</p>
         </div>
+        <div class="step2">
+          <p>第二步：</p><a href="https://home.m.jd.com/myJd/newhome.action" class="button is-link" target="_blank">登陆京东</a>
+        </div>
+        <div class="step3">
+          <p>第三步：</p><a href="javascript:;" class="button is-link">点击下面的开始</a>
+          <div class="localTime">
+            <span>本机时间：</span>
+            <span>{{nowDate.year}}年</span>
+            <span>{{nowDate.mouth}}月</span>
+            <span>{{nowDate.day}}日</span>
+            <span>{{nowDate.hour}}时</span>
+            <span>{{nowDate.minutes}}分</span>
+            <span class="red">{{nowDate.second}}秒</span>
+          </div>
+          <a href="https://www.baidu.com/s?wd=%E6%97%B6%E9%97%B4&rsv_spt=1&rsv_iqid=0xb67449a50001ced2&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=7&rsv_sug1=4&rsv_sug7=100" class="button is-link" target="_blank">百度时间</a>
+        </div>
+      </div>
+
+      <div class="form">
+          <div class="notification is-info">
+            <input class="input is-info" type="text" placeholder="请再次输入券的名字" v-model="name">
+            <p>时间仅支持数字,中间用英文逗号','隔开,零点写24点</p>
+            <input class="input is-info" type="text" placeholder="请再次输入券的时间" v-model="date">
+            <textarea class="textarea is-info" type="text" placeholder="请再次输入api接口" v-model="api"></textarea>
+            <a class="button is-success add" @click="addData" :data-name="name" :data-api="api" :data-date="date">添加到页面</a>
+          </div>
+      </div>
     </div>
     <div class="boxes">
       <template v-for="(api, index) in apis">
-        <ticket :name="api.name" :api="api.api" :date="api.date" :time="time" :id="index"></ticket>
+        <ticket :name="api.name" :api="api.api" :date="api.date" :time="time" :id="index" @ievent="updateLocalstorage"></ticket>
       </template>
     </div>
   </div>
@@ -34,6 +59,14 @@ export default {
       name: '',
       date: '',
       api: '',
+      nowDate: {
+        year: null,
+        mouth: null,
+        day: null,
+        hour: null,
+        minutes: null,
+        second: null
+      },
       times: [
         {
           text: '10ms(电脑卡的别用100以下)',
@@ -238,7 +271,19 @@ export default {
   components: {
     ticket
   },
+  mounted () {
+    setInterval(this.getNowTime, 1000)
+  },
   methods: {
+    getNowTime () {
+      let nowTime = new Date()
+      this.nowDate.year = nowTime.getFullYear()
+      this.nowDate.mouth = nowTime.getMonth() + 1
+      this.nowDate.day = nowTime.getDate()
+      this.nowDate.hour = nowTime.getHours()
+      this.nowDate.minutes = nowTime.getMinutes()
+      this.nowDate.second = nowTime.getSeconds()
+    },
     /**
      * check value type
      * @param  {String}  type
@@ -307,6 +352,10 @@ export default {
       console.log(this.apis)
       this.setLocalStorage('apis', this.apis)
       console.log(localStorage)
+    },
+    updateLocalstorage () {
+      console.log(localStorage)
+      this.apis = this.getLocalStorage('apis') || []
     }
   }
 }
@@ -315,6 +364,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .one {
+  .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: yellow;
+    // color: white;
+  }
   .form {
     margin: 10px auto;
     width: 320px;
@@ -330,6 +386,40 @@ export default {
   .shenjianjiange {
     display:flex;
     justify-content: center;
+  }
+  .step {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    .step1 {
+      padding: 20px 0 0 0;
+    }
+    .step2 {
+      padding: 20px;
+      p {
+        padding-top: 8px;
+        display: inline-block;
+      }
+      a {
+        display: inline-block;
+      }
+    }
+    .step3 {
+      .localTime {
+        padding: 10px 0;
+        .red {
+          color: red;
+        }
+      }
+      p {
+        padding-top: 8px;
+        display: inline-block;
+      }
+      a {
+        display: inline-block;
+      }
+    }
   }
   .boxes {
     padding-top: 10px;

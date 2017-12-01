@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>通过 BFC 规则实现</title>
+  <style media="screen">
+    #bfc-column {
+      position: relative;
+      /*overflow: hidden;*/
+    }
+
+    #div-a-3 {
+      background-color: red;
+      width: 50px;
+      height: 30px;
+      float: left;
+    }
+
+    #div-b-3 {
+      background-color: blue;
+      height: 30px;
+      overflow: hidden;
+    }
+
+    #div-c-3 {
+      background-color: yellow;
+      width: 100%;
+      height: 30px;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  see <a href="https://codepen.io/honoka/pen/JGpapq">demo</a>
+  <p>
+    <a href="http://www.w3cplus.com/css/understanding-bfc-and-margin-collapse.html">深入理解BFC和Margin Collapse </a>
+    <br />
+    <a href="http://www.html-js.com/article/1866">CSS之BFC详解</a>
+    <br />
+    <p>简而言之，BFC 可以帮助我们解决布局中左边元素脱离文档流后，右边元素的左外边距会触碰到包含块容器的左外边框的问题</p>
+    <p>现在我们仅需注意将 div-b 设定为 BFC 元素即可。</p>
+    <p>参考
+      <a href="https://www.cnblogs.com/honoka/p/5156133.html">常用</a>
+    </p>
+  </p>
+  <div id="bfc-column">
+    <div id="div-a-3">div-a</div>
+    <div id="div-b-3">div-b</div>
+    <div id="div-c-3">div-c</div>
+  </div>
+
+
+</body>
+
+</html>

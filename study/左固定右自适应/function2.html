@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>通过浮动实现</title>
+  <style media="screen">
+    /*浮动定位*/
+
+    #div-a-2 {
+      background-color: red;
+      width: 50px;
+      height: 30px;
+      float: left;
+    }
+
+    #div-b-2 {
+      background-color: blue;
+      height: 30px;
+      margin-left: 50px;
+    }
+
+    #div-c-2 {
+      background-color: yellow;
+      width: 100%;
+      height: 30px;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    see <a href="https://codepen.io/honoka/pen/PZQdEG">demo</a> 注意点如下： div-a 设定为左浮动 div-b 与上面一样需要将 margin-left 属性值设为 div-a 的宽度，原因同上，浮动也会脱离文档流 div-c 最好清除浮动，避免浮动的影响
+  </p>
+  <div id="float-column">
+
+    <div id="div-a-2">div-a</div>
+    <div id="div-b-2">div-b</div>
+
+    <div id="div-c-2">div-c</div>
+  </div>
+</body>
+
+</html>

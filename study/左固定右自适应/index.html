@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>左边固定宽度，右边自适应</title>
+  <style media="screen">
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar {
+      float: right;
+      width: 300px;
+    }
+
+    .content {
+      margin-right: 300px;
+    }
+
+    .wrap2 {
+      position: relative;
+    }
+
+    .sidebar2 {
+      width: 300px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .content2 {
+      margin-right: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="sidebar" style="height:300px;background-color:red;">
+      固定宽度
+    </div>
+    <div class="content" style="height:400px;background:black;">
+      自适应
+    </div>
+  </div>
+  <div class="footer" style="background-color:yellow;">
+    后面的一个div，以确保前面的定位不会导致后面的变形
+  </div>
+
+
+  <div class="wrap2">
+    <div class="content2" style="height:340px;background:red;">
+      自适应
+    </div>
+    <div class="sidebar2" style="height:240px;background:black;">
+      固定宽度
+    </div>
+  </div>
+  <div class="footer" style="background-color:yellow;">
+    后面的一个div，以确保前面的定位不会导致后面的变形
+  </div>
+
+
+  <style media="screen">
+    .sidebar3 {
+      width: 300px;
+      float: right;
+      color: yellow;
+
+    }
+    .content3 {
+      margin-left: -310px;
+      float: left;
+      width: 100%;
+    }
+    #contentb {
+      margin-left: 310px;
+    }
+  </style>
+  <div class="wrap3">
+    <div class="content3" style="height:140px;background-color:red;">
+      <div class="contentb">
+        content自适应，在前面
+      </div>
+    </div>
+    <div class="sidebar3" style="height:240px;background-color:black;">
+      sidebar固定宽度
+    </div>
+  </div>
+
+
+  http://jo2.org/css-auto-adapt-width/
+</body>
+
+</html>

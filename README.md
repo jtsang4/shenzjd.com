@@ -1,64 +1,68 @@
-# shenzujiudi
+## shenzjd.com
 
-> 今天打开github，看到自己star最多的一个仓库"shenzujiudi",依稀还记得2017年双十一，那个时候写了京东的《抢券助手》,获得了大量的流量。这个仓库也是那个时候创建的，看着还有十几个人watch，几十个star，55个fork，再看看最近一次更新日期是两年前。不禁觉得有些。。。
+> 今天打开 github，看到自己 star 最多的一个仓库"shenzujiudi",依稀还记得 2017 年双十一，那个时候写了京东的《抢券助手》,获得了大量的流量。这个仓库也是那个时候创建的，看着还有十几个人 watch，几十个 star，55 个 fork，再看看最近一次更新日期是两年前。不禁觉得有些。。。
 
-> 大部分人关注这个仓库都是因为抢券助手，三年没更新了，大家可能都忘了。留个尸体：https://shenzjd.com/shenzjd/ticket4/#/
+> 大部分人关注这个仓库都是因为抢券助手，三年没更新了，大家可能都忘了
 
-> [源码尸体1](./Ticket)
-> [源码尸体2](./ticketAssistant)
-
-
-> 当时还更新了四个版本，也给我的网站带来了当时最大的流量，一万多PV，后来还更换了域名，大部分人都找不到家了
+> 当时还更新了四个版本，也给我的网站带来了当时最大的流量，一万多 PV，后来还更换了域名，大部分人都找不到家了
 > ![E6wnUJ.png](https://s2.ax1x.com/2019/05/08/E6wnUJ.png)
-> ![E6aXTJ.png](https://s2.ax1x.com/2019/05/08/E6aXTJ.png)
 
-# shenzjd.com
-
-今天重新给这个仓库更新名字"shenzujiudi" --> "shenzjd.com"
-
-先上一张最新的官网截图
+先上一张旧版的官网截图
 
 ![E6dFmD.png](https://s2.ax1x.com/2019/05/08/E6dFmD.png)
 
-神族九帝API仓库请移步(http://api.shenzjd.com)
-
--->https://github.com/wu529778790/api.shenzjd.com
-
-## 全网VIP视频解析
+## 全网 VIP 视频解析
 
 ![E606Qx.png](https://s2.ax1x.com/2019/05/08/E606Qx.png)
 
-支持几乎全网的vip视频解析
+支持几乎全网的 vip 视频解析
 
-[全网VIP视频解析项目地址](./video)
+[源码](./video)
 
-## VIP音乐搜索器
+[https://shenzjd.com/shenzjd/video/](https://shenzjd.com/shenzjd/video/)
+
+## VIP 音乐搜索器
 
 ![E6yNa8.png](https://s2.ax1x.com/2019/05/08/E6yNa8.png)
 
-支持网易音乐，QQ音乐，酷狗，酷我等十几个音乐搜索，在线试听，及下载。
+支持网易音乐，QQ 音乐，酷狗，酷我等十几个音乐搜索，在线试听，及下载。
 
-[vip音乐搜索器](./music)
+[源码](./music)
 
-作者github：https://github.com/maicong/music
+[https://shenzjd.com/shenzjd/music/](https://shenzjd.com/shenzjd/music/)
 
-## 在线音乐
+作者 github：<https://github.com/maicong/music>
 
-![E661FU.png](https://s2.ax1x.com/2019/05/08/E661FU.png)
+## 教你使用百度
 
-[在线音乐项目地址](./MKmusic)
+群里总是有些小白问一些比较低级的问题，一般都是发送一下教你使用百度
 
-这个是防QQ音乐做的在线版，很好看。目前的缺点是，v收费音乐暂时获取不了
+![动画](https://cdn.jsdelivr.net/gh/wu529778790/image/blog/动画.gif)
 
-作者github(已经停止维护)：https://github.com/mengkunsoft/MKOnlineMusicPlayer
+[源码](./baidu)
+
+[https://shenzjd.com/shenzjd/baidu/](https://shenzjd.com/shenzjd/baidu/)
 
 ## 水墨清香：一款本地水印添加工具
 
-源码地址：https://github.com/wu529778790/waterMark
-[![](https://ws3.sinaimg.cn/large/007DE5Hlgy1g3hyxe8l9pj30lh0ip18t)](https://pic.shenzjd.com/007DE5Hlgy1g3hyxe8l9pj30lh0ip18t)
+![20211126131037](https://cdn.jsdelivr.net/gh/wu529778790/image/blog/20211126131037.png)
 
-加水印操作在本地完成，任何证件信息不会上传到网站，请放心使用开源更放心
+[源码](./waterMark)
 
-水印文字、颜色、水印之间的间隙全部支持自定义
+[https://shenzjd.com/shenzjd/watermark/](https://shenzjd.com/shenzjd/watermark/)
 
-加水印操作全部在本地完成，不放心的可断网添加水印，开源，可自由查看代码
+## 图片压缩
+
+![20211126174716](https://cdn.jsdelivr.net/gh/wu529778790/image/blog/20211126174716.png)
+
+[源码](./tinyimg)
+
+[https://shenzjd.com/shenzjd/tinyimg/](https://shenzjd.com/shenzjd/tinyimg/)
+
+## 小霸王游戏机
+
+![20211126174833](https://cdn.jsdelivr.net/gh/wu529778790/image/blog/20211126174833.png)
+
+[源码](./xiaobawang)
+
+[https://shenzjd.com/shenzjd/xiaobawang/](https://shenzjd.com/shenzjd/xiaobawang/)

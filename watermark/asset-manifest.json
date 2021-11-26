@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shenzjd/watermark/static/css/main.0853bf32.chunk.css",
+    "main.js": "/shenzjd/watermark/static/js/main.753e17ad.chunk.js",
+    "main.js.map": "/shenzjd/watermark/static/js/main.753e17ad.chunk.js.map",
+    "runtime~main.js": "/shenzjd/watermark/static/js/runtime~main.f2123258.js",
+    "runtime~main.js.map": "/shenzjd/watermark/static/js/runtime~main.f2123258.js.map",
+    "static/js/2.2752fb64.chunk.js": "/shenzjd/watermark/static/js/2.2752fb64.chunk.js",
+    "static/js/2.2752fb64.chunk.js.map": "/shenzjd/watermark/static/js/2.2752fb64.chunk.js.map",
+    "index.html": "/shenzjd/watermark/index.html",
+    "precache-manifest.0f840221bc0eb1633b867075d3c341b6.js": "/shenzjd/watermark/precache-manifest.0f840221bc0eb1633b867075d3c341b6.js",
+    "service-worker.js": "/shenzjd/watermark/service-worker.js",
+    "static/css/main.0853bf32.chunk.css.map": "/shenzjd/watermark/static/css/main.0853bf32.chunk.css.map"
+  }
+}

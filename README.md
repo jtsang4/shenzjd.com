@@ -66,3 +66,11 @@
 [源码](./xiaobawang)
 
 [https://shenzjd.com/shenzjd/xiaobawang/](https://shenzjd.com/shenzjd/xiaobawang/)
+
+## 神族九帝网盘
+
+![20211126181027](https://cdn.jsdelivr.net/gh/wu529778790/image/blog/20211126181027.png)
+
+[作者](https://github.com/qkqpttgf/OneManager-php/blob/master/readme_cn.md)
+
+[https://pan.shenzjd.com/](https://pan.shenzjd.com/)
